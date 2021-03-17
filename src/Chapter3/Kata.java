@@ -1,17 +1,22 @@
+package Chapter3;
+
 public class Kata {
 
+
     private int copies;
-    private int price;
+    private static int price;
     public String name = "Grace";
 
-    public double calculateAverage(int firstNumber, int secondNumber, int thirdNumber) {
+
+    public static double calculateAverage(int firstNumber, int secondNumber, int thirdNumber) {
         double average = (firstNumber + secondNumber + thirdNumber) * 1.0 / 3.0;
         return average;
 
     }
 
 
-    public String CalculateGrade(int grade) {
+
+    public static String calculateGrade(int grade) {
 
         if (grade >= 90) {
             return "A";
@@ -27,7 +32,7 @@ public class Kata {
             return "F";
     }
 
-    public boolean Even(int num) {
+    public static boolean Even(int num) {
         if (num % 2 == 0)
             return true;
         else {
@@ -36,7 +41,7 @@ public class Kata {
 
     }
 
-    public boolean isPrimeNumber(int numberToCheckForPrime) {
+    public static boolean isPrimeNumber(int numberToCheckForPrime) {
         int counter = 2;
         while (counter < numberToCheckForPrime) {
             if ((numberToCheckForPrime % counter == 0)) {
@@ -51,7 +56,9 @@ public class Kata {
     }
 
 
-    public int calculatePrice(int copies) {
+
+
+    public  static int calculatePrice(int copies) {
 
         if (copies > 0 && copies <= 4) {
             return 1500 *copies;
@@ -73,6 +80,43 @@ public class Kata {
 
         return price;
     }
+
+    public static int getMaximumNumber(int[] array) {
+        int maximumNumber = array[array.length-1];
+        for (int i = 1; i < array.length ; i++) {
+            maximumNumber = Math.max(array[i],maximumNumber);
+        }
+        return maximumNumber;
+    }
+ 
+
+    public int getMinimumNumber(int[] array) {
+        int minimumNumber = array[0];
+        for (int i = 0; i < array.length; i++) {
+            minimumNumber = Math.min(array[i], minimumNumber);
+        }
+        return minimumNumber;
+
+        }
+
+    public int getSum(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length ; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+
+    public double getAverage(int[] array) {
+        int sum;
+        int average = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = getSum(array);
+             average  =  sum/array.length ;
+        }
+        return average;
+    }
 }
+
 
 

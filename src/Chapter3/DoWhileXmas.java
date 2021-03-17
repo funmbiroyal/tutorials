@@ -58,9 +58,9 @@ public class DoWhileXmas {
 
 
                 }
-                counter++;
+            counter++;
             }
-            while (counter <= 12) ;
+        while (counter <= 12) ;
 
 
             }

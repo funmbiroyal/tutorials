@@ -1,8 +1,11 @@
+package Chapter3;
+
+import Chapter3.Kata;
+
 public class KataTest {
 
   public static void main(String[] args) {
-
-      Kata gracey = new Kata();
+      /**Kata gracey = new Kata();
 
         System.out.println("The name is " + gracey.name);
 
@@ -26,8 +29,9 @@ public class KataTest {
 
       System.out.println("The price of 9 copies is : " + gracey.calculatePrice(9));
 
-      System.out.println("The price of 5 copies is : " + gracey.calculatePrice(5));
-
+      System.out.println("The price of 5 copies is : " + gracey.calculatePrice(5));**/
+      System.out.println(Kata.calculateGrade(59));
+      System.out.println(Kata.calculatePrice(3));
   }
 
 

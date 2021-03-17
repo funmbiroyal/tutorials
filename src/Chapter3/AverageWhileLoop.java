@@ -11,7 +11,7 @@ public class AverageWhileLoop {
 
         while (counter <=3);
         counter ++;
-
+        System.out.println("Enter your number:  ");
 
     }
 

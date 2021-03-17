@@ -1,3 +1,5 @@
+package Chapter3;
+
 import java.util.Scanner;
 
 public class MaxAndMin {
@@ -8,7 +10,7 @@ public class MaxAndMin {
         int smallestNumber = 0;
         Scanner inputCollector = new Scanner(System.in);
 
-        while (inputCounter <= 3) {
+        while (inputCounter <= 5) {
             System.out.println("Enter your number");
             userInput = inputCollector.nextInt();
 
@@ -21,8 +23,8 @@ public class MaxAndMin {
 
             if (userInput < smallestNumber) smallestNumber = userInput;
 
+            System.out.println("the maximum number is: " + largestNumber +"\nthe minimum number is " + smallestNumber);
             inputCounter++;
-
         }
         System.out.println("the maximum number is: " + largestNumber +"\nthe minimum number is " + smallestNumber);
 
