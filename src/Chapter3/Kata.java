@@ -15,7 +15,6 @@ public class Kata {
     }
 
 
-
     public static String calculateGrade(int grade) {
 
         if (grade >= 90) {
@@ -56,12 +55,10 @@ public class Kata {
     }
 
 
-
-
-    public  static int calculatePrice(int copies) {
+    public static int calculatePrice(int copies) {
 
         if (copies > 0 && copies <= 4) {
-            return 1500 *copies;
+            return 1500 * copies;
 
         }
 
@@ -81,42 +78,53 @@ public class Kata {
         return price;
     }
 
-    public static int getMaximumNumber(int[] array) {
-        int maximumNumber = array[array.length-1];
-        for (int i = 1; i < array.length ; i++) {
-            maximumNumber = Math.max(array[i],maximumNumber);
-        }
-        return maximumNumber;
-    }
- 
 
-    public int getMinimumNumber(int[] array) {
-        int minimumNumber = array[0];
-        for (int i = 0; i < array.length; i++) {
-            minimumNumber = Math.min(array[i], minimumNumber);
-        }
-        return minimumNumber;
-
-        }
-
-    public int getSum(int[] array) {
+    public static int getSum(int [] array) {
         int sum = 0;
-        for (int i = 0; i < array.length ; i++) {
-            sum += array[i];
+        for (int i = 0; i < array.length; i++) {
+               sum += array[i];
         }
         return sum;
     }
 
-    public double getAverage(int[] array) {
-        int sum;
-        int average = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = getSum(array);
-             average  =  sum/array.length ;
-        }
-        return average;
-    }
 }
 
-
-
+//    public static int getMaximumNumber(int[] array) {
+//        int maximumNumber = array[array.length-1];
+//        for (int i = 1; i < array.length ; i++) {
+//            maximumNumber = Math.max(array[i],maximumNumber);
+//        }
+//        return maximumNumber;
+//    }
+//
+//
+//    public int getMinimumNumber(int[] array) {
+//        int minimumNumber = array[0];
+//        for (int i = 0; i < array.length; i++) {
+//            minimumNumber = Math.min(array[i], minimumNumber);
+//        }
+//        return minimumNumber;
+//
+//        }
+//
+//    public int getSum(int[] array) {
+//        int sum = 0;
+//        for (int i = 0; i < array.length ; i++) {
+//            sum += array[i];
+//        }
+//        return sum;
+//    }
+//
+//    public double getAverage(int[] array) {
+//        int sum;
+//        int average = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            sum = getSum(array);
+//             average  =  sum/array.length ;
+//        }
+//        return average;
+//    }
+//}
+//
+//
+//

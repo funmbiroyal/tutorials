@@ -22,17 +22,6 @@ public class Array {
             total = total + array[counter];
         System.out.printf("Total of array elements: %d%n", total);
     }
-//    int [] array = new int[6];
-//    Random rand = new Random();
-//
-//        for (int i = 1; i <= 10 ; i++) {
-//        ++array [1+ rand.nextInt(5)];
-//        // System.out.println( array + " ");
-//    }
-//        System.out.printf("%s%10s%n", "number","value");
-//        for (int number= 0; number < array.length ; number++) {
-//
-//        System.out.printf( "%4d%8d%n" ,number , array[number]);
 
     }
 
