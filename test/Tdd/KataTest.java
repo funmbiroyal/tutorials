@@ -1,76 +1,64 @@
-package Tdd;
-
-import Chapter3.Kata;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class KataTest {
-
-   @Test
-    void canSumArrayTest(){
-       int [] array = {1,2,3};
-       assertEquals(6,Kata.getSum(array));
-
-
-   }
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    private Kata kata = new Kata();
-//    @BeforeEach
-//    void startAllTestWith()
-//    {
-//        kata = new Kata();
-//    }
+//package Tdd;
 //
+//import Chapter3.Kata;
+//import org.junit.jupiter.api.Test;
 //
-//    @Test
-//    void canGetMaximumArrayTest() {
-//        int[] array = {12, 23, 45, 6, 8, 78, 9, 778, 37};
-//        int maximumNumber = kata.getMaximumNumber(array);
-//        assertEquals(778, maximumNumber);
+//import static org.junit.jupiter.api.Assertions.assertEquals;
 //
-//    }
-//    @Test
-//    void canGetMinimumArrayTest(){
-//        int[] array = {12, 23, 45, 6, 8, 78, 9, 778, 37};
-//        int minimumNumber = kata.getMinimumNumber(array);
-//        assertEquals(6, minimumNumber);
-//    }
+//public class KataTest {
 //
-//    @Test
+//   @Test
 //    void canSumArrayTest(){
-//        int [] array = {10,20,67};
-//        int sum = kata.getSum(array);
-//        assertEquals(97, sum);
-//    }
+//       int [] array = {1,2,3,0};
+//       assertEquals(6,Kata.getSum(array));
+//   }
+//   @Test
+//    void canGetMaximumArrayTest(){
+//       int [] array = {1,2,3,8};
+//       assertEquals(8,Kata.getMaximum(array));
+//   }
+//   @Test
+//    void canGetMinimumTest(){
+//       int [] array = {1,2,3,8};
+//       assertEquals(1,Kata.getMinimum(array));
+//   }
+//
+//@Test
+//    void canGetAverage(){
+//       int [] array = {1,2,3};
+//       assertEquals(2.0,Kata.getAverage(array));
+//}
+//@Test
+//    void canGetSumWithoutMinimum() {
+//    int[] array = {1, 2, 3, 8};
+//    assertEquals(13, Kata.getSumWithoutMinimum(array));
+//}
 //
 //    @Test
-//    void canGetAverageArrayTest(){
-//        int [] array ={ 10,23,10,5};
-//                                                                                                                                                                                                                                                                                                     double average = kata.getAverage(array);
-//        assertEquals(12.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ,average);
+//    void canGetSumWithoutMaximum(){
+//        int[] array = {1, 2, 3, 8};
+//        assertEquals(6, Kata.getSumWithoutMaximum(array));
 //    }
+//
 //}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+

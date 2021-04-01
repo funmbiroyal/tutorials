@@ -10,7 +10,11 @@ public class RandomloopTest {
     @Test
     void CanCreateArrayTest() {
         int[] array = {2, 4, 7, 8, 23, 6};
-        assertNotEquals(array[1], array[2], RandomLoopArray.generateNumbers(array));
+        int firstRandom = RandomLoopArray.generateNumbers(array);
+        System.out.println(firstRandom);
+        int secondRandom = RandomLoopArray.generateNumbers(array);
+        System.out.println(secondRandom);
+        assertNotEquals(firstRandom, secondRandom);
 
     }
 
