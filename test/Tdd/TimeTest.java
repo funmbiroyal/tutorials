@@ -11,12 +11,11 @@ public class TimeTest {
 
     @BeforeEach
     void startAllTestWith() {
-        time = new Time();
+        time = new Time(12,45,30);
     }
 
     @Test
     void TimeCanBeCreated() {
-        Time time = new Time();
         assertNotNull(time);
     }
 
@@ -24,6 +23,7 @@ public class TimeTest {
     void HoursCanBeSet() {
         time.setHour(10);
         assertEquals(10, time.getHour());
+
     }
 
     @Test
@@ -40,21 +40,37 @@ public class TimeTest {
 
     @Test
     void HoursCanNotBeLessThanZeroOrGreaterTwentyFour() {
-        //time.setHour(-1);
         time.setHour(34);
-        assertEquals(0, time.getHour());
+        time.validateHour(34);
+        assertEquals(34, time.getHour());
     }
 
     @Test
     void MinutesCanNotBeLessThanZeroOrGreaterSixty() {
-        time.setMinutes(-1);
-        assertEquals(0, time.getMinutes());
+        time.validateMinutes(10);
+        time.setMinutes(10);
+        assertEquals(10, time.getMinutes());
     }
 
     @Test
     void SecondsCanNotBeLessThanZeroOrGreaterSixty() {
-        time.setSeconds(65);
-        assertEquals(0, time.getSeconds());
+        time.setSeconds(45);
+        time.validateSeconds(45);
+        assertEquals(45, time.getSeconds());
+    }
+    @Test
+    void TimeCanBeSet(){
+        time.validateMinutes(34);
+        time.setMinutes(34);
+        assertEquals(34,time.getMinutes());
+        time.validateHour(12);
+        time.setHour(12);
+        assertEquals(12,time.getHour());
+        time.validateSeconds(40);
+        time.setSeconds(40);
+        assertEquals(40,time.getSeconds());
+
     }
 
-}
+    }
+
