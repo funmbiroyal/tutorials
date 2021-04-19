@@ -49,8 +49,12 @@ public class Turtle {
     }
 
     public void moveForwardBy(int numberOfSteps) {
+        numberOfSteps = numberOfSteps-1;
         switch (currentDirection){
             case EAST -> currentPosition.increaseColumnPositionBy(numberOfSteps);
+            case SOUTH -> currentPosition.increaseRowPositionBy(numberOfSteps);
+            case WEST -> currentPosition.decreaseColumnPositionBy(numberOfSteps);
+            case NORTH -> currentPosition.decreaseRowPositionBy(numberOfSteps);
         }
     }
 
@@ -58,4 +62,51 @@ public class Turtle {
         return currentPosition;
     }
 
+    public void writeOn(SketchPad sketchPad, int numberOfSteps) {
+        if(!isPenUp()){
+            int counter = 0;
+            switch (currentDirection){
+
+                case EAST :
+                    while (counter<numberOfSteps){
+                        var floor = sketchPad.getFloor();
+                        int rowPosition= currentPosition.getRowPosition();
+                        int columnPosition = currentPosition.getColumnPosition();
+                        floor[rowPosition][columnPosition+counter]= 1;
+                        counter++;
+                    }
+
+                    break;
+                case SOUTH:
+                    while(counter<numberOfSteps){
+                        var floor= sketchPad.getFloor();
+                        int rowPosition = currentPosition.getRowPosition();
+                        int columnPosition = currentPosition.getColumnPosition();
+                        floor[rowPosition+counter][columnPosition]=1;
+                        counter++;
+                    }
+                    break;
+                case WEST:
+                    while(counter<numberOfSteps){
+                        var floor= sketchPad.getFloor();
+                        int rowPosition = currentPosition.getRowPosition();
+                        int columnPosition = currentPosition.getColumnPosition();
+                        floor[rowPosition][columnPosition-counter]=1;
+                        counter++;
+                    }
+                    break;
+
+                case NORTH:
+                    while(counter<numberOfSteps){
+                        var floor= sketchPad.getFloor();
+                        int rowPosition = currentPosition.getRowPosition();
+                        int columnPosition = currentPosition.getColumnPosition();
+                        floor[rowPosition-counter][columnPosition]=1;
+                        counter++;
+                    }
+                    break;
+            }
+        }
+        moveForwardBy(numberOfSteps);
     }
+}
