@@ -30,4 +30,24 @@ public class Position {
     public void increaseColumnPositionBy(int numberOfSteps) {
         columnPosition += numberOfSteps;
     }
+
+    public void increaseRowPositionBy(int numberOfSteps) {
+        rowPosition += numberOfSteps;
+    }
+
+    public void decreaseColumnPositionBy(int numberOfSteps) {
+        columnPosition -= numberOfSteps;
+    }
+
+    public void decreaseRowPositionBy(int numberOfSteps) {
+        rowPosition -= numberOfSteps;
+    }
+
+    public int getRowPosition() {
+        return rowPosition;
+    }
+
+    public int getColumnPosition() {
+        return columnPosition;
+    }
 }

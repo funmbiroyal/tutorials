@@ -1,2 +1,4 @@
-package Chapter9;public class WheelBarrow {
+package Chapter9;
+
+public class WheelBarrow {
 }

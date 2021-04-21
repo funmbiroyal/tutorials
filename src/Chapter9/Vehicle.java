@@ -1,2 +1,4 @@
-package Chapter9;public class Vehicle {
+package Chapter9;
+
+public class Vehicle {
 }

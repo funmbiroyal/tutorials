@@ -10,10 +10,12 @@ public class LargestNumberTest {
     LargestNumber largestNumber;
     @BeforeEach
     void startEachTestWith(){
+
         largestNumber = new LargestNumber();
     }
     @Test
     void canCreateLargestNumberTest(){
+
         assertNotNull(largestNumber);
     }
     @Test

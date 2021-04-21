@@ -1,2 +1,4 @@
-package Chapter9;public class Bus {
+package Chapter9;
+
+public class Bus {
 }

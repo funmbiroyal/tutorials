@@ -9,12 +9,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RandomloopTest {
     @Test
     void CanCreateArrayTest() {
-        int[] array = {2, 4, 7, 8, 23, 6};
-        int firstRandom = RandomLoopArray.generateNumbers(array);
-        System.out.println(firstRandom);
-        int secondRandom = RandomLoopArray.generateNumbers(array);
-        System.out.println(secondRandom);
-        assertNotEquals(firstRandom, secondRandom);
+        int[] array = new int[6];
+        for (int i = 0; i < 100; i++) {
+
+
+            int firstRandom = RandomLoopArray.generateNumbers(array);
+            System.out.println(firstRandom);
+            int secondRandom = RandomLoopArray.generateNumbers(array);
+            System.out.println(secondRandom);
+            assertNotEquals(firstRandom==-1, secondRandom==-1);
+        }
 
     }
 

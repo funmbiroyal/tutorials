@@ -1,5 +1,4 @@
 package Chapter4;
-
 public class TableValues {
     public static void main(String[] args) {
         //System.out.printf("%s%s%s%nN,10*N");
@@ -16,10 +15,10 @@ public class TableValues {
 
                 System.out.printf("%d%8d%10d%10d%n",i,j,k,l);
 
-            }
+                        }
+                    }
 
         }
     }
-}
 }
 }

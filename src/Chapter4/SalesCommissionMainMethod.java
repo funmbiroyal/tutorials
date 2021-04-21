@@ -1,8 +1,10 @@
+package Chapter4;
+
 import java.util.Scanner;
 
 public class SalesCommissionMainMethod {
     public static void main(String[] args) {
-Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
         int weeklyEarning =200;
         for (int i = 1; i <=5; i++) {
 

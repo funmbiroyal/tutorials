@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class DigitSeparation {
     public static void main(String[] args) {
         int userInput = 3456;

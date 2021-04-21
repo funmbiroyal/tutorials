@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class GuessTheNumberMainMethod {
     public static void main(String[] args) {
         SecureRandom secureRandom = new SecureRandom();
-        int random = 1 + secureRandom.nextInt(1000);
+
         Scanner scanner = new Scanner(System.in);
         int prompt = 0;
         while (prompt != -1) {
         for (int i = 0; i <= 5 ; i++) {
-
+            int random = 1 + secureRandom.nextInt(1000);
 
             System.out.println("Enter your guess number: ");
             int userInput = scanner.nextInt();

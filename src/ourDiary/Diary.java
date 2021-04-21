@@ -1,2 +1,6 @@
-package ourDiary;public class Diary {
+package ourDiary;
+
+public class Diary {
+    public void addEntry() {
+    }
 }

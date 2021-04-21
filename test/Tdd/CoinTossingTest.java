@@ -22,8 +22,6 @@ public class CoinTossingTest {
     @Test
     void canFlipCoin(){
         coinTossing.flipCoin();
-        coinTossing.flipCoin();
-
-        assertEquals(HEAD,coinTossing.getCurrentCoinState());
+        assertTrue(coinTossing.isHead());
     }
 }

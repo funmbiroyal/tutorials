@@ -1,2 +1,5 @@
-package Tdd;public enum CoinState {
+package Tdd;
+
+public enum CoinState {
+    HEAD,TAIL;
 }

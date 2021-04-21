@@ -27,6 +27,7 @@ public class CreditLimitCalculator {
     }
 
     public int getNewBalance() {
+        calculateNewBalance();
         return newBalance;
     }
 
