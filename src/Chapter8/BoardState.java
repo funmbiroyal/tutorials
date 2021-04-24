@@ -1,4 +1,4 @@
-package Chapter8Test;
+package Chapter8;
 
 public enum BoardState {
     O,X,EMPTY;
