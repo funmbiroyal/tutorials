@@ -10,7 +10,7 @@ public class SalariedEmployeeTest {
     @BeforeEach
     void startAllTestWith(){
        salariedEmployee = new SalariedEmployee("Lara",
-               "George",5678,10000);
+               "George",5678,10000, 05,10,2020);
     }
     @Test
     void salariedEmployeeCanBeCreated(){
@@ -31,6 +31,15 @@ public class SalariedEmployeeTest {
     }
     @Test
     void canGetSalary(){
+
         assertEquals(10000,salariedEmployee.getSalary());
+    }
+    @Test
+    void canGetDateOfBirth(){
+        assertEquals(05/10/2020,salariedEmployee.getDateOfBirth());
+    }
+    @Test
+    void canGetEarnings(){
+        assertEquals(10000, salariedEmployee.earnings());
     }
 }
