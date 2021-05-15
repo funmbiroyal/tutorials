@@ -1,28 +1,32 @@
 package Chapter6;
 
-import java.util.Scanner;
-
 public class PerfectNumber {
-    public static void isPerfect (int number ){
-        int store = 0;
-        String conclusion = "not a perfect Number";
-        for (int i = 1; i <number ; i++) {
-            store += i;
-            //System.out.println(i);
-           if(store == number) {
-               conclusion = "is a perfect Number";
-               // System.out.println(conclusion);
-           }
-           }
-        System.out.println(conclusion);
+        public static int findPerfectNumber(int num) {
+            int store = 0;
+            for (int counter = 1; counter < num; counter++) {
+                if(num % counter == 0)
+             store+= counter;
+            }
+            if(num == store){
+                System.out.println(store +" "+"is a perfect number");
+            }
+            return store;
+        }
+        public  static  int findFirstHundredPerfectNumbers(){
+            int perfectNumbers = 0;
+            for (int counter = 1; counter <=10000 ; counter++) {
+                 perfectNumbers = findPerfectNumber(counter);
+            }
+            return perfectNumbers;
         }
 
 
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your number");
-        int userNumber = scanner.nextInt();
-        isPerfect(userNumber);
+
+        System.out.println(findPerfectNumber(100));
+        System.out.println(findFirstHundredPerfectNumbers());
+
     }
-    }
+}
 
