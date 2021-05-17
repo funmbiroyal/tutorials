@@ -7,9 +7,8 @@ public class ModifiedGuessTheNumber {
     private static int numberOfGuess;
 
     public static void countNumberOfGuess() {
-        for (int i = 1; i <= 1000; i++) {
-            numberOfGuess++;
-        }
+        numberOfGuess++;
+
     }
 
     public static int getNumberOfGuess() {
@@ -21,10 +20,11 @@ public class ModifiedGuessTheNumber {
         SecureRandom secureRandom = new SecureRandom();
         int guessNumber = 0;
         int userGuess;
-        
+        int guessCount;
+
         String userResponse = " ";
         do {
-            guessNumber =1 + secureRandom.nextInt(1000);
+            guessNumber = 1 + secureRandom.nextInt(1000);
             System.out.println("Guess the Number: ");
             userGuess = scanner.nextInt();
             while (userGuess != guessNumber) {
@@ -36,9 +36,22 @@ public class ModifiedGuessTheNumber {
                 userGuess = scanner.nextInt();
             }
             System.out.println("Congratulations, You just Guessed the number!");
+            countNumberOfGuess();
+            guessCount = getNumberOfGuess();
+
             System.out.println("Your number of guess is " + getNumberOfGuess());
-        }while (userResponse.equalsIgnoreCase(("yes")));
-      //  System.out.println("Game Ended, See you Next Time!");
+            if (guessCount < 10) {
+                System.out.println("You got lucky");
+            } else if (guessCount == 10) {
+                System.out.println("Hahaah , you know the secret");
+            } else  {
+                System.out.println("You should be able to do better!");
+
+            }
+            System.out.println("Do you want to play again?");
+            userResponse = scanner.next();
+        } while (userResponse.equalsIgnoreCase(("yes")));
+        System.out.println("Game Ended, See you Next Time!");
 
     }
 }
