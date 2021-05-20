@@ -1,2 +1,5 @@
-package Chapter7;public enum Suit {
+package Chapter7;
+
+public enum Suit {
+    HEART, SPADE, CLUB, DIAMOND
 }
