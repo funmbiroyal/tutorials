@@ -8,7 +8,8 @@ public class ModifiedCrapsGame {
     private static int bankBalance = 1000;
     private static final SecureRandom randomGenerator = new SecureRandom();
     private static GameStatus status = GameStatus.START;
-
+    private static  int points ;
+    private static int sumOfDie;
     public static int rollDice() {
         int die1 = 1 + randomGenerator.nextInt(6);
         int die2 = 1 + randomGenerator.nextInt(6);
@@ -18,8 +19,6 @@ public class ModifiedCrapsGame {
     }
 
     public static void playCrap() {
-        int points = 0;
-        int sumOfDie;
         int result = rollDice();
         if (status == GameStatus.START) {
             if (result == 7 || result == 11) {
@@ -45,7 +44,6 @@ public class ModifiedCrapsGame {
     }
 
     public static void validateWager(int wager) {
-       // playCrap();
 
         if (wager <= bankBalance && status == GameStatus.WON) {
             bankBalance += wager;
@@ -54,9 +52,14 @@ public class ModifiedCrapsGame {
             bankBalance -= wager;
 
         } else if (wager <= bankBalance && status == GameStatus.CONTINUE) {
-                bankBalance+=wager;
-        }else{
-            System.out.println("Ooops,insufficient bank balance");
+
+                 if(sumOfDie == points){
+                     bankBalance += wager;
+                 }else{
+                  bankBalance -= wager;
+                }
+        } else {
+            System.out.println("Oops,insufficient bank balance");
         }
 
 
