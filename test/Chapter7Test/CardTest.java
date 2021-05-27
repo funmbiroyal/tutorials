@@ -1,6 +1,7 @@
 package Chapter7Test;
 
 import Chapter7.Card;
+import Chapter7.CardDeck;
 import Chapter7.Exception.InvalidCardValueException;
 import org.junit.jupiter.api.Test;
 
@@ -65,4 +66,37 @@ public class CardTest {
     void invalidCardExceptionThrownWhenValueIsInvalid(){
         assertThrows(InvalidCardValueException.class,()-> new Card(DIAMOND,14));
     }
+
+    @Test
+    void cardToStringTest(){
+        Card card = new Card(DIAMOND, 13);
+        String expectedToString = "King of Diamond";
+        assertEquals(expectedToString, card.toString());
+        card = new Card(HEART, 3);
+        expectedToString = "3 of Heart";
+        assertEquals(expectedToString, card.toString());
+        System.out.println(card);
+    }
+
+    @Test
+    void testSameCardValueEquals(){
+        Card kingOfSpade = new Card(SPADE, 13);
+        Card kingOfHeart  = new Card(HEART, 13);
+        assertEquals(kingOfHeart, kingOfSpade);
+        assertEquals(kingOfSpade, kingOfHeart);
+    }
+
+    @Test
+    void testSameSuitValueEquals(){
+        Card kingOfSpade = new Card(SPADE, 13);
+        Card queenOfSpade  = new Card(SPADE, 12);
+
+        assertEquals(queenOfSpade, kingOfSpade);
+        assertEquals(kingOfSpade, queenOfSpade);
+        CardDeck cardDeck = new CardDeck(2);
+        assertNotEquals(kingOfSpade, cardDeck);
+    }
+
+
+
 }
