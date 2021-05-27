@@ -3,20 +3,28 @@ package Chapter7;
 import Chapter7.Exception.StackOverflowException;
 import Chapter7.Exception.StackUnderflowException;
 
+import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class CardDeck {
-    private Card[] cardGame;
+    private Card[] cards;
     private int lastPushLocation =-1;
+     private final int numberOfCards = 52;
+     private static final SecureRandom randomGenerator = new SecureRandom();
 
     public CardDeck(int numberOfCards) {
-        cardGame = new Card[numberOfCards];
+
+        cards = new Card[numberOfCards];
     }
 
     public  Card peek() {
-        return cardGame[lastPushLocation];
+        return cards[lastPushLocation];
     }
 
     public int getSize() {
-        return cardGame.length;
+        return cards.length;
     }
 
     public void push(Card cardGame) {
@@ -24,14 +32,25 @@ public class CardDeck {
             throw new StackOverflowException("Card deck is full");
         }
         lastPushLocation++;
-        this.cardGame[lastPushLocation]= cardGame;
+        this.cards[lastPushLocation]= cardGame;
+    }
+    public void shuffleCardsInDeck(){
+        for (int i = 0; i < cards.length; i++) {
+            int randomIndex = randomGenerator.nextInt(cards.length);
+            Card temp = cards[randomIndex];
+            cards[randomIndex] = cards[i];
+            cards[i] = temp;
+
+        }
+        Collections.shuffle(Arrays.asList(cards));
+
     }
 
     public Card pop() {
         if(isEmpty()){
             throw new StackUnderflowException("Card deck is Empty");
         }
-        return cardGame[lastPushLocation--];
+        return cards[lastPushLocation--];
     }
 
     public boolean isEmpty() {
@@ -41,5 +60,6 @@ public class CardDeck {
     public boolean isFull() {
         return lastPushLocation == getSize() - 1;
     }
+
 }
 
