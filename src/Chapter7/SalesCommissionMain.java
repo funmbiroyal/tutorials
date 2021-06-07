@@ -7,25 +7,20 @@ public class SalesCommissionMain {
         SalesCommission salesCommission = new SalesCommission();
 
         Scanner scanner = new Scanner(System.in);
+        int userGrossSales = 0;
+        double grossPay;
 
-        System.out.println("Enter your weekly earning: ");
-
-        int userWeeklyEarning = scanner.nextInt();
-        salesCommission.verifyWeeklyEarning(userWeeklyEarning);
-
-        while (userWeeklyEarning!= 0){
-
+        while (userGrossSales != -1) {
             System.out.println("Enter gross sales:  ");
-            int userGrossSales = scanner.nextInt();
-
-            System.out.println("Enter your weekly earning: ");
-            userWeeklyEarning = scanner.nextInt();
-            salesCommission.verifyWeeklyEarning(userWeeklyEarning);
-
-            double grossPay = salesCommission.calculateGrossPay(userWeeklyEarning,userGrossSales);
-          salesCommission.determineSalaryRange((int) grossPay);
-          //salesCommission.displayResult();
+            userGrossSales = scanner.nextInt();
+            grossPay = salesCommission.calculateGrossPay(userGrossSales);
+            salesCommission.determineSalaryRange((int) grossPay);
         }
+
+
+            salesCommission.displayResult();
+
+
 
     }
 }
