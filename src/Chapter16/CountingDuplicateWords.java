@@ -11,16 +11,17 @@ public class CountingDuplicateWords {
 
         String[] tokens = input.split(" ");
 
-
          for (String token : tokens)
              {
              String word = token.toLowerCase();
+            String newWord = word.replaceAll("\\p{Punct}","");
 
-            if (map.containsKey(word)){
-                int count = map.get(word);
-                map.put(word, count + 1);
+            if (map.containsKey(newWord)) {
+                int count = map.get(newWord);
+                map.put(newWord, count + 1);
+
             }else
-            map.put(word, 1);
+            map.put(newWord, 1);
         }
     }
 
@@ -30,13 +31,9 @@ public class CountingDuplicateWords {
         System.out.printf("%nMap contains:%nKey\t\t\t\tValue%n");
 
         for (String key : sortedKeys){
-            if (map.containsKey(key)) {
-                int count = map.get(key);
-                if( count > 1 )
-                System.out.printf("%-10s%10s%n", key, map.get(key));
-            }
+            System.out.printf("%-10s%10s%n", key, map.get(key));
         }
-        //System.out.printf("%nsize: %d%nisEmpty: %b%n",map.size(), map.isEmpty());
+        System.out.printf("%nSize: %d%nisEmpty: %b%n",map.size(), map.isEmpty());
     }
 
     public static void main(String[] args) {
@@ -44,4 +41,5 @@ public class CountingDuplicateWords {
         createMap(testMap);
         displayMap(testMap);
     }
+
 }
