@@ -7,6 +7,9 @@ public class CommandLineArgument {
                     "including an array size, initial value and increment");
         } else {
             int lengthOfArray = Integer.parseInt(args[0]);
+            if (lengthOfArray<= 0){
+                lengthOfArray = 10;
+            }
             int initialValue = Integer.parseInt(args[1]);
             int increment = Integer.parseInt(args[2]);
             int[] array = new int[lengthOfArray];
