@@ -11,6 +11,7 @@ public class Time2 {
     }
 
     public Time2(int hour) {
+
         this(hour,0,0);
     }
 
@@ -32,6 +33,11 @@ public class Time2 {
     }
     public Time2(Time2 time){
         this(time.getHour(),time.getMinute(),time.getSecond());
+    }
+
+    public void modifyTimeAsSeconds(int hour,int minute,int second) {
+
+
     }
 
     public void setTime(int hour,int minute,int second) {
@@ -82,7 +88,13 @@ public class Time2 {
         this.second = second;
     }
 
+    public static void displayTime(String header, Time2 time) {
+        System.out.printf("%s%n %s%n %s%n",
+                header, time.toUniversalString(), time.toString());
+    }
+
     public String toUniversalString(){
+
         return String.format("%02d:%02d:%02d:",getHour(),getMinute(),getSecond());
     }
 
