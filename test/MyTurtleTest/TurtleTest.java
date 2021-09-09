@@ -66,10 +66,48 @@ public class TurtleTest {
     void turtleCanMoveForwardFromTheEast(){
         assertSame(Direction.EAST,turtle.getCurrentDirection());
         turtle.moveForwardBy(5);
+        assertEquals(new Position(0,4),turtle.getCurrentPosition());
+
+    }
+    @Test
+    void turtleCanMoveForwardFromTheSouth(){
+        assertSame(Direction.EAST,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(0,4),turtle.getCurrentPosition());
         turtle.turnRight();
         assertSame(Direction.SOUTH,turtle.getCurrentDirection());
         turtle.moveForwardBy(5);
-
+        assertEquals(new Position(4,4),turtle.getCurrentPosition());
+    }
+    @Test
+    void turtleCanMoveForwardFacingWest(){
+        assertSame(Direction.EAST,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
         assertEquals(new Position(0,4),turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(Direction.SOUTH,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(4,4),turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(Direction.WEST,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(4,0),turtle.getCurrentPosition());
+    }
+    @Test
+    void turtleCanMoveForwardWhileFacingNorth(){
+        assertSame(Direction.EAST,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(0,4),turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(Direction.SOUTH,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(4,4),turtle.getCurrentPosition());
+        turtle.turnRight();
+        assertSame(Direction.WEST,turtle.getCurrentDirection());
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(4,0),turtle.getCurrentPosition());
+        turtle.turnRight();
+        turtle.moveForwardBy(5);
+        assertEquals(new Position(0,0),turtle.getCurrentPosition());
     }
 }
