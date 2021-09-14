@@ -17,8 +17,33 @@ public class MergeSortExample {
         }
     }
     private static void merge(int data [], int  left, int firstHalf, int secondHalf,int right ){
+      int leftIndex = left;
+      int rightIndex = secondHalf;
+      int combinedIndex = left;
+      int [] combined = new int[data.length];
 
-    }
+        System.out.printf("merge: %s%n", subArrayString(data,left,firstHalf));
+        System.out.printf("        %s%n", subArrayString(data,secondHalf,right));
+
+        while (leftIndex <= firstHalf && rightIndex <= secondHalf){
+            if (data[leftIndex] <= data[rightIndex])
+                combined[combinedIndex++] = data[leftIndex++];
+            else
+                combined[combinedIndex++] = data[rightIndex++];
+             }
+        if (leftIndex == secondHalf)
+            while (rightIndex <= right)
+                combined[combinedIndex++] = data[rightIndex++];
+        else
+            while (leftIndex <= firstHalf)
+                combined[combinedIndex++] = data[leftIndex++];
+        for (int i = left; i <= right ; i++)
+            data[i] = combined[i];
+        System.out.printf("       %s%n%n",subArrayString(data,left,right));
+
+
+        }
+
     private static String subArrayString(int data [], int low, int high){
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < low ; i++)
