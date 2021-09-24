@@ -6,6 +6,7 @@ import Chapter7.myTurtle.entities.Position;
 import Chapter7.myTurtle.entities.Turtle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import turtleGraphics.SketchPad;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -109,5 +110,36 @@ public class TurtleTest {
         turtle.turnRight();
         turtle.moveForwardBy(5);
         assertEquals(new Position(0,0),turtle.getCurrentPosition());
+    }
+    @Test
+    void turtleCanWriteWhileFacingEast(){
+        turtle.movePenDown();
+        SketchPad sketchPad = new SketchPad(20,20);
+        int numberOfSteps = 5;
+        turtle.writeOn(sketchPad,numberOfSteps);
+        int counter = 0;
+        int [][] floor = sketchPad.getFloor();
+        while (counter < numberOfSteps){
+           assertEquals(1,floor[0][counter]);
+//            System.out.println(floor[0][counter]);
+            counter++;
+        }
+        assertEquals(new Position(0,4),turtle.getCurrentPosition());
+
+    }
+    @Test
+    void turtleCanWriteWhileFacingSouth(){
+        turtle.movePenDown();
+        SketchPad sketchPad = new SketchPad(20,20);
+        int numberOfSteps = 5;
+        turtle.writeOn(sketchPad,numberOfSteps);
+        int counter = 0;
+        int [][] floor = sketchPad.getFloor();
+        while (counter < numberOfSteps){
+            assertEquals(1,floor[counter][4]);
+            counter++;
+        }
+        assertEquals(new Position(0,4),turtle.getCurrentPosition());
+
     }
 }
