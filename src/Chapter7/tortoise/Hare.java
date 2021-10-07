@@ -1,19 +1,19 @@
 package Chapter7.tortoise;
 
 public class Hare extends Player{
-    public int bigHop(){
+    public static int bigHop(){
         int position = Hare.getPosition();
         position+=9;
         return position;
     }
-    public int smallHop(){
+    public static int smallHop(){
         int position = Hare.getPosition();
         position+=1;
         return position;
     }
-    public int bigSlip(){
-        int position = 0;
-       if (Hare.getPosition() >12){
+    public static int bigSlip(){
+        int position = Hare.getPosition();
+       if ( position >12){
            position -=12;
        }else{
            position =1;
@@ -21,16 +21,16 @@ public class Hare extends Player{
        return position;
        }
 
-    public int smallSlip(){
-        int position = 0;
-        if (Hare.getPosition() >2){
+    public static int smallSlip(){
+        int position = Hare.getPosition();
+        if ( position > 2){
             position -=2;
         }else{
             position =1;
         }
         return position;
     }
-    public void fallAsSleep(){
+    public static void fallAsSleep(){
        int position = Hare.getPosition();
     }
     }
