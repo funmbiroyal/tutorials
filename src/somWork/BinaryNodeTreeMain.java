@@ -1,6 +1,6 @@
-package articles;
+package somWork;
 
-import static articles.BinaryNodeTree.nodeExists;
+import static somWork.BinaryNodeTree.nodeExists;
 
 public class BinaryNodeTreeMain {
     public static void main(String []args)
