@@ -90,7 +90,7 @@ public class HareTest {
     }
 
         @Test
-        void givesZeroAfterExhaustingThePositions(){
+        void givesOneAfterExhaustingThePositions(){
         assertEquals(0, Hare.getPosition());
         assertEquals(9,Hare.bigHop());
         Hare.setPosition(9);
