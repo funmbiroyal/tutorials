@@ -1,41 +1,35 @@
 package somWork;
 
 import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Stack;
 
 public class KthSmallest {
-    public class Node {
-        int key;
-        Node left;
-        Node right;
-        int val;
-    }
-    public int findKthSmallest(Node root, int k) {
-        Stack<Node> stack = new Stack<>();
+    // function to find k-th largest element
+    static int kthSmallest(ArrayList<ArrayList<Integer>> mat, int k)
+    {
+        int n = mat.size();
 
-        Node p = root;
-        int result = 0;
+        if(k > n*n)
+            return -1;
 
-        while(!stack.isEmpty() || p!=null){
-            if(p!=null){
-                stack.push(p);
-                p = p.left;
-            }else{
-                Node t = stack.pop();
-                k--;
-                if(k==0)
-                    result = t.val;
-                p = t.right;
-            }
-        }
+        // smallest element is the first element of the matrix
+        if(k == 1)
+            return mat.get(0).get(0);
 
-        return result;
+        // define array and push contents of the matrix into it
+        ArrayList <Integer> arr = new ArrayList <Integer>();
+        for (ArrayList<Integer> integers : mat)
+            for (int j = 0; j < n; j++)
+                arr.add(integers.get(j));
+
+        // sort the array and obtain k-th smallest element
+        Collections.sort(arr);
+
+        return arr.get(k-1);
     }
 
-    public static void main(String[] args) {
-        KthSmallest k = new KthSmallest();
-        Node node = new Node(6); //fixme
-        k.findKthSmallest(6, 4);//fixme
-
-    }
 }
+
