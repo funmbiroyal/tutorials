@@ -1,6 +1,7 @@
 package Chapter7.myCardGame;
 
 import java.security.SecureRandom;
+//import java.util.Random;
 
 public class DeckOfCards {
    private Card [] deck;
@@ -9,6 +10,7 @@ public class DeckOfCards {
     private static final SecureRandom randomGenerator = new SecureRandom();
 
     public DeckOfCards(){
+
         String [] faces = {"Ace", "Deuce", "Three", "Four", "Five", "Six",
                 "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
         String []suits ={ "Hearts", "Diamonds", "Clubs", "Spades"};
@@ -38,4 +40,26 @@ public class DeckOfCards {
         return null;
     }
 
-}
+    private Card[] populateDeck() {
+        String[] faces = {"Ace", "Deuce", "Three", "Four", "Five", "Six",
+                "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        deck = new Card[numberOfCardsInDeck];
+
+        for (int i = 0; i < deck.length; i++) {
+            deck[i] = new Card(faces[i % 13], suits[i / 13]);
+        }
+        return deck;
+    }
+    public Card[] dealHand() {
+        Card [] hand = new Card[5];
+        Card [] deck = populateDeck();
+        shuffle();
+        for(int i = 0; i < hand.length; i++){
+            hand[i] = deck[i];
+        }
+        return hand;
+    }
+    }
+
+
