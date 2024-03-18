@@ -3,7 +3,7 @@ package somWork;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-//fixme
+
 public class StringEqualityMain {
     public static void main(String[] args) {
         StringsEquality equality = new StringsEquality();

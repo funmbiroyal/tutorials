@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class DeckOfCardsMain {
     public static void main(String[] args) {
      DeckOfCards myDeckOfCards = new DeckOfCards();
+//     Card myCard = new Card();
      myDeckOfCards.shuffle();
      for(int i = 1; i <= 52; i++){
          System.out.printf("%-19s",myDeckOfCards.dealCard());
@@ -15,6 +16,9 @@ public class DeckOfCardsMain {
         System.out.println();
         System.out.println("The five poker cards dealt are: ");
         System.out.println(Arrays.toString(myDeckOfCards.dealHand()));
+        System.out.println(myDeckOfCards.isPair());
+//     System.out.println(Arrays.toString(myDeckOfCards.is3Jacks()));
+
     }
 
 }

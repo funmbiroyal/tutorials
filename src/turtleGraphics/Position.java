@@ -9,7 +9,7 @@ public class Position {
         this.columnPosition = columnPosition;
     }
 
-    @Override
+   @Override
     public String toString() {
         String toString = "Position\n";
         toString += "Current Row Position: " + rowPosition;

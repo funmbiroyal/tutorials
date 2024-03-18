@@ -1,2 +1,4 @@
-package Chapter7;public class CardGame {
+package Chapter7;
+
+public class CardGame {
 }

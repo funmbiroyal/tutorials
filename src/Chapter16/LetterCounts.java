@@ -13,20 +13,20 @@ public class LetterCounts {
                 int count = map.get(letter);
                 map.put(letter, count + 1);
             }else
-                map.put(letter, 1);
+                map.put(letter,1);
         }
 
     }
 
     private static void displayMap(Map<Character, Integer> map) {
-        Set<Character> keys = map.keySet();
+        Set<Character>keys = map.keySet();
          TreeSet<Character> sortedKeys = new TreeSet<>(keys);
          System.out.printf("%nMap contains:%nKey\t\t\t\tValue%n");
 
         for (char key : sortedKeys){
             System.out.printf("%s\t\t\t\t%2s%n", key, map.get(key));
         }
-        System.out.printf("%nsize: %d%nisEmpty: %b%n",map.size(), map.isEmpty());
+        System.out.printf("%nSize: %d%nisEmpty: %b%n",map.size(), map.isEmpty());
 }
 
     public static void main(String[] args) {

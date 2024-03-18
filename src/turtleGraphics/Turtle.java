@@ -42,7 +42,7 @@ public class Turtle {
             case SOUTH ->  currentDirection = WEST;
             case NORTH -> currentDirection = EAST;
         }
-       
+
     }
     private void changeCurrentDirection(Direction newDirection){
         currentDirection = newDirection;
@@ -79,7 +79,7 @@ public class Turtle {
                     break;
                 case SOUTH:
                     while(counter<numberOfSteps){
-                        var floor= sketchPad.getFloor();
+                         var floor= sketchPad.getFloor();
                         int rowPosition = currentPosition.getRowPosition();
                         int columnPosition = currentPosition.getColumnPosition();
                         floor[rowPosition+counter][columnPosition]=1;

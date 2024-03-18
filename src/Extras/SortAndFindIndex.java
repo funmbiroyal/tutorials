@@ -11,8 +11,8 @@ public class SortAndFindIndex {
                 if (numbers[i] > numbers[j]){
                     numbers[i] = numbers[j];
                     numbers[j] = temp;
-                }
 
+                }
             }
         }
         System.out.println(Arrays.toString(numbers));
@@ -41,7 +41,7 @@ public class SortAndFindIndex {
 
     public static void main(String[] args) {
         //int[] array  = {2,4,-3,0,0,0,0,5};
-        int[] array  = {2,4,-3,0,5, 9,9};
+        int[] array  = {2,4,-3,0,5,9};
         sortArray(array);
         findIndexOfFirstAndLastDuplicateNumber(array,9);
     }

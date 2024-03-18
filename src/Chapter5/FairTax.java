@@ -27,7 +27,7 @@ public class FairTax {
         return input;
     }
 
-    public int calculateFairTax(int expenses) {
+    public double calculateFairTax(double expenses) {
         return  expenses * 23/100;
     }
 }

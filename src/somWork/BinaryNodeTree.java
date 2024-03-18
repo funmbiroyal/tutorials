@@ -1,4 +1,4 @@
-package articles;
+package somWork;
 
 public class BinaryNodeTree {
     // Binary tree node

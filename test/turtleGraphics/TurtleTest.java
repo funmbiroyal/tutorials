@@ -214,8 +214,10 @@ assertEquals(new Position(0,4),turtle.getCurrentPosition());
         turtle.writeOn(sketchPad,5);
         //assert
         int counter = 0;
+
         int [][] floor = sketchPad.getFloor();
         while (counter<numberOfSteps){
+            System.out.println(floor[0][counter]);
             assertEquals(1,floor[0][counter]);
             counter++;
         }

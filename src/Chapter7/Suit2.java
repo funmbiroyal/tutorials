@@ -1,4 +1,4 @@
-package Chapter7Test;
+package Chapter7;
 
 public enum Suit2 {
         TRIANGLES, CROSSES, SQUARES, CIRCLES,STARS,WHOT;
@@ -23,4 +23,4 @@ public enum Suit2 {
         }
     }
 
-}
+

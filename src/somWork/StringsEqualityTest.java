@@ -1,4 +1,4 @@
-package articles;
+package somWork;
 
 import org.junit.jupiter.api.Test;
 

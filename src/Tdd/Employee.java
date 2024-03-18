@@ -1,6 +1,6 @@
 package Tdd;
 
-public class Employee extends Object {
+public abstract class Employee extends Object {
     private int socialSecurityNumber;
     private String firstName;
     private String lastName;
@@ -29,4 +29,6 @@ public class Employee extends Object {
                 "Employee", firstName, lastName,
                 "social security number", socialSecurityNumber);
     }
+
+    public abstract int earnings();
 }

@@ -39,5 +39,6 @@ public class DiceRollingTest {
     void canRollDie(){
         DiceRolling.rollDie();
         DiceRolling.calculateSumOfDie();
+        
     }
 }

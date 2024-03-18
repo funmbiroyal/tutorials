@@ -1,4 +1,4 @@
-package articles;
+package somWork;
 
 public class Human {
     private String name;

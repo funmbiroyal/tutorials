@@ -1,9 +1,12 @@
 package Tdd;
 
+import Chapter6.CoinTossing;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static Tdd.CoinState.HEAD;
+import java.security.SecureRandom;
+
+import static Chapter6.CoinState.HEAD;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CoinTossingTest {
@@ -22,6 +25,9 @@ public class CoinTossingTest {
     @Test
     void canFlipCoin(){
         coinTossing.flipCoin();
-        assertTrue(coinTossing.isHead());
+        SecureRandom secureRandom = new SecureRandom();
+        int generatedNumber = secureRandom.nextInt(2);
+
+        assertEquals(HEAD,coinTossing.getCurrentCoinState());
     }
 }

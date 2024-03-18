@@ -13,7 +13,12 @@ public class EmployeeTest {
     @BeforeEach
     void startAllTestWith(){
 
-        employee = new Employee("Jane","Brown",345);
+        employee = new Employee("Jane", "Brown", 345) {
+            @Override
+            public int earnings() {
+                return 0;
+            }
+        };
     }
     @Test
     void canCreateEmployee(){

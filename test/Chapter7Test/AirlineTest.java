@@ -3,7 +3,6 @@ package Chapter7Test;
 import Chapter7.Airline;
 import Chapter7.Passenger;
 import Chapter7.FirstClassIsFullException;
-import Chapter7.SeatAlreadyOccupiedException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -45,7 +44,7 @@ public class AirlineTest {
     }
 
     @Test
-    void passengerCanBookSeatTest() throws FirstClassIsFullException, SeatAlreadyOccupiedException {
+    void passengerCanBookSeatTest() throws FirstClassIsFullException{
         passenger.bookSeat(true,airline);
         assertEquals(1, passenger.getSeatNumber());
 

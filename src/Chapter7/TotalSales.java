@@ -43,7 +43,7 @@ public class TotalSales {
     public void addBreadSales(){
         int [] productD = sales[3];
         int total = 0;
-        for (int i = 0; i < productD.length ; i++) {
+        for (int i = 0; i < productD.length - 1 ; i++) {
             System.out.println("How many Bread sold: ");
             int quantity = scanner.nextInt();
             productD[i] = quantity;
@@ -55,7 +55,7 @@ public class TotalSales {
     public void addEggSales(){
         int [] productE = sales[4];
         int total = 0;
-        for (int i = 0; i < productE.length ; i++) {
+        for (int i = 0; i < productE.length - 1 ; i++) {
             System.out.println("How many Egg sold: ");
             int quantity = scanner.nextInt();
             productE[i] = quantity;
@@ -99,6 +99,17 @@ public class TotalSales {
         }
         sales[5][4] = total;
     }
+
+    public void displayTotalSales() {
+        //int [][] table = new int[6][5]
+        for (int i = 0; i < sales.length; i++) {
+            for (int j = 0; j < sales[i].length; j++) {
+                System.out.print(sales[i][j] +" ");
+            }
+            System.out.println();
+        }
+       // return table;
+    }
     public static void main(String[] args) {
 
       TotalSales salesPeople = new TotalSales();
@@ -114,13 +125,11 @@ public class TotalSales {
         salesPeople.calculateColumn4();
         salesPeople.calculateColumn5();
 
-        for (int i = 0; i < salesPeople.sales.length; i++) {
-            for (int j = 0; j < salesPeople.sales[i].length; j++) {
-            System.out.print(salesPeople.sales[i][j] +" ");
-            }
-            System.out.println();
-        }
+        salesPeople.displayTotalSales();
+
     }
+
+
 }
 
 

@@ -1,2 +1,4 @@
-package BeansBusinessException;public class Beanss {
+package BeansBusinessException;
+
+public class Beanss {
 }

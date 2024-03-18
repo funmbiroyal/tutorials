@@ -1,6 +1,9 @@
-package somWork;
+package somWork.linklistPalindrome;
 
-import static somWork.PalindromeLinklist.isPalindrome;
+
+import java.util.Stack;
+
+import static somWork.linklistPalindrome.PalindromeLinklist.isPalindrome;
 
 public class PalindromeLinkListMain {
     public static void main(String args[])
@@ -15,13 +18,16 @@ public class PalindromeLinkListMain {
         three.ptr = four;
         four.ptr = five;
 
+
+
         boolean condition = isPalindrome(one);
         if(condition == true){
-            System.out.println("Linked list is a palidrome.");
+            System.out.println("Linked list is a palindrome.");
         }
         else{
-            System.out.println("Linked list is NOT a palidrome.");
+            System.out.println("Linked list is NOT a palindrome.");
 
         }
     }
 }
+

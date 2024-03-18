@@ -3,6 +3,8 @@ import java.util.Arrays;
 //import java.util.Arrays;
 //
 public class Test {
+//    static int wheels = 1;
+//    int tracks = 5;
 //    public static void main(String[] args) {
 //       /** int temp = 180;
 //
@@ -41,7 +43,7 @@ public class Test {
 //public static void main(String... names) { System.out.println(names[0]
 
 
-    public static void main(String[] args) {
+   // public static void main(String[] args) {
 //        int[] a;
 //        a = new int[10];
 //
@@ -63,22 +65,43 @@ public class Test {
 //        System.out.print("Hello ");
 //        System.out.println("World");
 //    }
-        int[] a = {99, 22, 11, 3, 11, 55, 44, 88, 2, -3};
+//        int[] a = {99, 22, 11, 3, 11, 55, 44, 88, 2, -3};
+//
+//        int result = 0;
+//
+//        for (int i = 0; i < a.length; i++) {
+//            if (a[i] > 30) {
+//                result += a[i];
+//            }
+//        }
+//
 
-        int result = 0;
-
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] > 30) {
-                result += a[i];
-            }
-        }
-
-        System.out.printf("Result is: %d%n", result);
-
-
-    }
-
+//
+//    static int start = 2;
+//    final int end;
+    //public Test(int x) {
+//        x = 4;
+//        end = x;
+//    }
+//    public void fly(int distance) {
+//        System.out.print(end-start+" ");
+//        System.out.print(distance);
+//    }
+//    public static void main(String... start) { new Test(10).fly(5);
+//
+//        String tree = "pine";
+//
+//        int count = 0;
+//        if (tree.equals("pine")) {
+//            int height = 55;
+//            count = count + 1;
+//        }
+//        System.out.print(height + count);
+//}
 }
+
+
+
 
 
 

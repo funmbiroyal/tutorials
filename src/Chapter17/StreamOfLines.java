@@ -17,7 +17,7 @@ public class StreamOfLines {
             Files.lines(Paths.get("concordance.txt"))
 
 
-            .map(line -> line.replaceAll("(?!')\\p{P}", " "))
+            .map(line -> line.replaceAll("\\p{P}", " "))
 
             .flatMap(line -> pattern.splitAsStream(line))
             .collect(Collectors.groupingBy(String::toLowerCase,

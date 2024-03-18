@@ -1,2 +1,4 @@
-package Chapter8;public class AlreadyOccupiedException {
+package Chapter8;
+
+public class AlreadyOccupiedException extends TicTacToeException{
 }

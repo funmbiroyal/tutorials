@@ -3,14 +3,14 @@ package Chapter8;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Players {
+public class Player {
     private Board playerBoard;
     private int movesMade = 0;
     private boolean playerWon;
     private boolean boardFull;
-    private boolean lastValuePlayedWasX;
+    boolean lastValuePlayedWasX;
 
-    public Players() {
+    public Player() {
         this.playerBoard = new Board();
         this.boardFull = false;
         this.playerWon = false;

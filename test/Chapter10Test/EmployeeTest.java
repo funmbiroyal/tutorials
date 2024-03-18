@@ -1,37 +1,39 @@
 package Chapter10Test;
 
-import Chapter10.Payroll;
+import Chapter10.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-public class PayrollTest {
-    Payroll payroll;
+//this unit test is not needed because the Employee class is an abstract class. new object cannot be created!
+//the sub class unit test covers for it's superclass because it is not abstract,unlike the super class!
+public class EmployeeTest {
+    Employee employee;
 @BeforeEach
 void startEachTestWith(){
-    payroll = new Payroll("Grace","Ola",56);
+    //
+    // employee = new Employee("Grace","Ola",56);
 }
     @Test
     void PayrollCanBeCreated(){
-        assertNotNull(payroll);
+        assertNotNull(employee);
     }
     @Test
     void canGetFirstName(){
-    assertEquals("Grace",payroll.getFirstname());
+    assertEquals("Grace", employee.getFirstname());
     }
     @Test
     void canGetLastName(){
-    assertEquals("Ola",payroll.getLastName());
+    assertEquals("Ola", employee.getLastName());
     }
     @Test
     void canGetSocialSecurityNumber(){
-    assertEquals(56,payroll.getSecurityNumber());
+    assertEquals(56, employee.getSocialSecurityNumber());
     }
 @Test
     void canPrintToString(){
-    assertEquals(toString(),payroll.toString());
+    assertEquals(toString(), employee.toString());
 
 }
 }

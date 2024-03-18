@@ -18,11 +18,11 @@ public class SalesCommissionTest {
     }
     @Test
     void canCalculateGrossPay(){
-      assertEquals(650.00,salesCommission.calculateGrossPay(200,5000));
+      assertEquals(650.00,salesCommission.calculateGrossPay(5000));
     }
     @Test
     void canCreateArrayOfCounters(){
-        salesCommission.verifyWeeklyEarning(200);
+        //salesCommission.verifyWeeklyEarning(200);
        salesCommission.determineSalaryRange(500);
     }
 }

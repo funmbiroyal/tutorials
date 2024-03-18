@@ -22,7 +22,6 @@ public class SeparatingDigit {
             int unit = getRemainder(userDigit, 10);
             result = unit + " " + result;
             userDigit = getQuotient(userDigit, 10);
-
         }
         System.out.println(result);
 

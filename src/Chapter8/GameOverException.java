@@ -1,2 +1,4 @@
-package Chapter8;public class GameOverException {
+package Chapter8;
+
+public class GameOverException extends TicTacToeException{
 }

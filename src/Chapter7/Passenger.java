@@ -31,6 +31,7 @@ public class Passenger {
     public  void bookSeat(boolean isFirstClass, Airline airline) throws ArrayIndexOutOfBoundsException {
         if (isFirstClass) {
             seatNumber = airline.assignSeat(true);
+
         } else {
            seatNumber =  airline.assignSeat(false);
         }

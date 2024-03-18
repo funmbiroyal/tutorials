@@ -2,8 +2,8 @@ package Chapter8;
 
 public class Board {
 
-    public BoardState boardArray[][]  = new BoardState[3][3];
-    private int totalNumberOfPlayers = 2;
+    public BoardState[][] boardArray = new BoardState[3][3];
+    private final int totalNumberOfPlayers = 2;
 
     public Board( ){
         for (int row = 0; row < boardArray.length ; row++) {

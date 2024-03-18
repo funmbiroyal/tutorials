@@ -1,11 +1,9 @@
 package Chapter7;
 
-import Chapter7.Exception.StackOverflowException;
-import Chapter7.Exception.StackUnderflowException;
+import Chapter7.Exception.*;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 public class CardDeck {
@@ -60,6 +58,15 @@ public class CardDeck {
     public boolean isFull() {
         return lastPushLocation == getSize() - 1;
     }
+
+  public static CardDeck createFullCardDeck(){
+        CardDeck cardDeck = new CardDeck(54);
+        for(Suit2 suit : Suit2.values());
+
+
+        return cardDeck;
+}
+
 
 }
 

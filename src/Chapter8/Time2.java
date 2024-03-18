@@ -7,6 +7,7 @@ public class Time2 {
     private int second;
 
     public Time2() {
+
         this(0,0,0);
     }
 
@@ -16,6 +17,7 @@ public class Time2 {
     }
 
     public Time2(int hour, int minute) {
+
         this(hour,minute,0);
     }
 
@@ -35,8 +37,11 @@ public class Time2 {
         this(time.getHour(),time.getMinute(),time.getSecond());
     }
 
-    public void modifyTimeAsSeconds(int hour,int minute,int second) {
-
+    public boolean modifyTimeAsSeconds(int hour, int minute, int second) {
+        if(hour < 0 || hour >= 24){
+            throw new IllegalArgumentException("Hour must be 0-23");
+        }
+    return  hour == hour * 60 *60;
 
     }
 

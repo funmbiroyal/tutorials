@@ -17,9 +17,9 @@ public class KthSmallestMain {
             int kthsmall = kthSmallest(mat,k);
 
             if(kthsmall == -1)
-                System.out.println("3rd smallest element doesn't exist.");
+                System.out.println(k + "rd smallest element doesn't exist.");
             else
-                System.out.println("3rd smallest element = "+kthsmall);
+                System.out.println(k + "rd smallest element = "+kthsmall);
 
         }
     }

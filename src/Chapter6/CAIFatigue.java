@@ -3,7 +3,7 @@ package Chapter6;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class CAIModification {
+public class CAIFatigue {
     private static SecureRandom secureRandom = new SecureRandom();
     private static int firstGeneratedNumber; //= 1 + secureRandom.nextInt(10);
     private static int secondGeneratedNumber; //= 1 + secureRandom.nextInt(10);

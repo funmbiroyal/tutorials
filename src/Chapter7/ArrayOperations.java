@@ -3,6 +3,7 @@ package Chapter7;
 import java.util.Arrays;
 
 public class ArrayOperations {
+
     public static void main(String[] args) {
 
         int [] array = new int[10];
@@ -15,12 +16,13 @@ public class ArrayOperations {
              ++ secondArray[i];
         }
         System.out.println("Values after adding one each " + Arrays.toString(secondArray));
-        System.out.print("Top 5 scores ----");
+        System.out.print("Top 5 scores ----  ");
         System.out.print(secondArray[14] + " ");
         System.out.print(secondArray[9] + " ");
         System.out.print(secondArray[11] + " ");
         System.out.print(secondArray[13] + " ");
         System.out.print(secondArray[4] + " ");
+
 
     }
 }

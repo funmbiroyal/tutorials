@@ -4,6 +4,7 @@ public class ModifiedSalaryCalculator {
     private int hoursWorked;
     private  int hoursWorkedWithExcess;
     private int excessGrossPay;
+    private int halfGrossPay;
 
     public void enterHoursWorked(int hoursWorked) {
         if(hoursWorked == 40)
@@ -28,15 +29,21 @@ public class ModifiedSalaryCalculator {
         return excessGrossPay;
     }
 
-    public void calculateGrossPayWithExcess(int hoursWorkedWithExcess, int halfGrossPay ) {
+    public int calculateGrossPayWithExcess(int hoursWorkedWithExcess, int halfGrossPay ) {
         int grossPayWithExcess = 0;
        grossPayWithExcess = hoursWorkedWithExcess * halfGrossPay;
 this.excessGrossPay = grossPayWithExcess;
+return excessGrossPay;
         }
 
     public int sumGrossPayWithExcess() {
         int overAllSum = excessGrossPay + getGrossPay();
         return overAllSum;
+    }
+
+    public int getExcessGrossPay() {
+       int grossPayWithExcess = hoursWorkedWithExcess * halfGrossPay;
+        return grossPayWithExcess;
     }
 }
 

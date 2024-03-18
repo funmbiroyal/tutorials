@@ -1,6 +1,9 @@
+package Chapter2;
+
 import java.util.Scanner;
 public class Add{
 public static void main(String[] args){
+  System.out.print("hello");  System.out.println(" there");
   int firstNumber;
   int secondNumber;
   int sum;

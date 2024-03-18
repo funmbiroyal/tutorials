@@ -1,8 +1,13 @@
 package Chapter2;
 
+import java.util.Scanner;
+
 public class DigitSeparation {
     public static void main(String[] args) {
-        int userInput = 3456;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your four Digit number");
+        int userInput = scanner.nextInt();
+
         int firstDigit = userInput/1000;
         int userInput2 = userInput%1000;
         int secondDigit = userInput2/100;
@@ -12,6 +17,7 @@ public class DigitSeparation {
         int fourthDigit = userInput4/1;
 
         System.out.println(firstDigit + " " + secondDigit+ " " + thirdDigit+ " " + fourthDigit);
+
     }
     }
 

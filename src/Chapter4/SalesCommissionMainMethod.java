@@ -13,7 +13,7 @@ public class SalesCommissionMainMethod {
         double percentage = userInput* 0.09;
             System.out.println("your commission on the item sold is" + " " +percentage);
             System.out.println("Your weekly earning is" + " " + weeklyEarning +" "+ "dollars");
-        double result = 200 + (userInput* 0.09);
+        double result = 200 + percentage;
         System.out.println("Your total earning for this week is" + " " + result);
 
         }

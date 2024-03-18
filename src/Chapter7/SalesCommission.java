@@ -1,12 +1,14 @@
 package Chapter7;
 
-public class SalesCommission {
+import java.util.Arrays;
 
+public class SalesCommission {
+    private int weeklyEarning = 200;
     private int[] array = new int[9];
 
-    public double calculateGrossPay(int weeklyEarning, int amountOfItemSold) {
+    public double calculateGrossPay( int amountOfItemSold) {
         double percentage = amountOfItemSold * 0.09;
-        double result = weeklyEarning + percentage;
+        double result = this.weeklyEarning + percentage;
         return result;
     }
 
@@ -15,56 +17,63 @@ public class SalesCommission {
 
     }
 
-    public void verifyWeeklyEarning(int weeklyEarning) {
-        if (weeklyEarning < 200) {
-            System.out.println("Invalid weekly earning, it is 200!");
-        }
-    }
-
-    public int [] determineSalaryRange(int grossPay) {
-        if (grossPay >= 200 && grossPay < 300) {
+    public int [] determineSalaryRange(int grossSales) {
+        if (grossSales >= 200 && grossSales < 300) {
             ++array[0];
 
-        } else if (grossPay >= 300 && grossPay < 400) {
+        } else if (grossSales >= 300 && grossSales < 400) {
             ++array[1];
 
-        } else if (grossPay >= 400 && grossPay < 500) {
+        } else if (grossSales >= 400 && grossSales < 500) {
             ++array[2];
 
-        } else if (grossPay >= 500 && grossPay < 600) {
+        } else if (grossSales >= 500 && grossSales < 600) {
             ++array[3];
 
-        } else if (grossPay >= 600 && grossPay < 700) {
+        } else if (grossSales >= 600 && grossSales < 700) {
             ++array[4];
 
-        } else if (grossPay >= 700 && grossPay < 800) {
+        } else if (grossSales >= 700 && grossSales < 800) {
             ++array[5];
 
-        } else if (grossPay >= 800 && grossPay < 900) {
+        } else if (grossSales >= 800 && grossSales < 900) {
             ++array[6];
 
-        } else if (grossPay >= 900 && grossPay < 1000) {
+        } else if (grossSales >= 900 && grossSales < 1000) {
             ++array[7];
 
-        } else if (grossPay >= 1000) {
+        } else if (grossSales >= 1000) {
             ++array[8];
         }
         return array;
     }
+    public void printArray(){
+        System.out.println(Arrays.toString(array));
+    }
     public void displayResult(){
-        String result = """
-                 $200–299
-                 $300–399
-                 $400–499
-                 $500–599
-                 $600–699
-                 $700–799
-                 $800–899
-                 $900–999
-                 $1,000 and over
-                """;
+//        String result = """
+//                 Salary Range
+//                 $200–299
+//                 $300–399
+//                 $400–499
+//                 $500–599
+//                 $600–699
+//                 $700–799
+//                 $800–899
+//                 $900–999
+//                 $1,000 and over
+//                """;
+//
+//        System.out.printf("%s%20s%n","Salary Range", "SalesPeople");
+//        System.out.printf("%s%s%n",result,Arrays.toString(array));
+        //System.out.printf("%s%10s%n%7s%n%7s%n%7s%n%7s%n%7s%n%7s%n%7s%n%7s%n","Salary Range","SalesPeople","$200–299","$300–399","$400–499","$500–599","$600–699","$700–799","$800–899","$900–999");
+        for (int element : array){
+            System.out.printf("%12d%n",element);
+        }
+//        for(int i = 0; i< array.length; i++){
 
-        System.out.printf("%s%10s%n","Salary Range", "SalesPeople");
-        System.out.printf("%d%n",result);
+//            System.out.print(array[i] + " \n");
+//
+//        }
     }
 }

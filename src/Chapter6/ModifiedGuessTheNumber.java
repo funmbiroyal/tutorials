@@ -27,6 +27,7 @@ public class ModifiedGuessTheNumber {
             guessNumber = 1 + secureRandom.nextInt(1000);
             System.out.println("Guess the Number: ");
             userGuess = scanner.nextInt();
+            countNumberOfGuess();
             while (userGuess != guessNumber) {
                 if (userGuess > guessNumber) {
                     System.out.println("Too High, Try Again!");
@@ -34,14 +35,14 @@ public class ModifiedGuessTheNumber {
                     System.out.println("Too Low, Try Again!");
                 }
                 userGuess = scanner.nextInt();
+                countNumberOfGuess();
             }
             System.out.println("Congratulations, You just Guessed the number!");
-            countNumberOfGuess();
             guessCount = getNumberOfGuess();
 
             System.out.println("Your number of guess is " + getNumberOfGuess());
             if (guessCount < 10) {
-                System.out.println("You got lucky");
+                System.out.println("Either you know the secret or you got lucky");
             } else if (guessCount == 10) {
                 System.out.println("Hahaah , you know the secret");
             } else  {

@@ -11,6 +11,7 @@ public class Craps {
     private static final int YO_LEVEN = 11;
     private static final int BOX_CARS = 12;
 
+
     public static int rollDice() {
         SecureRandom secureRandom = new SecureRandom();
         int die1 = 1 + secureRandom.nextInt(6);

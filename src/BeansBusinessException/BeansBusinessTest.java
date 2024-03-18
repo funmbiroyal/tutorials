@@ -11,7 +11,7 @@ public class BeansBusinessTest {
            Beanss beanss = purchase.buyBeans(50) ;
 
         }
-        catch (InsufficientResourcesException ex){
+        catch (LackOfMoneyException ex){
             System.out.println(ex);
         }
     }

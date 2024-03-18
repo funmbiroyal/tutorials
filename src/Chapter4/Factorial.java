@@ -11,8 +11,11 @@ public class Factorial {
         }else {
 
            while (number >=2 ){
+
                 factorial  *= number;
+//               System.out.print(number + "* = ");
                 number--;
+
            }
 
 
@@ -37,7 +40,7 @@ public class Factorial {
     }
 
     public static void main(String[] args) {
-        System.out.println(findFactorialOfNumber(5));
-        System.out.println(findMathConstant(30));
+        System.out.println(findFactorialOfNumber(3));
+//       System.out.println(findMathConstant(30));
     }
 }

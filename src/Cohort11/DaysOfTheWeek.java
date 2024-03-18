@@ -1,2 +1,5 @@
-package Cohort11;public enum DaysOfTheWeek {
+package Cohort11;
+
+public enum DaysOfTheWeek {
+    SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY
 }

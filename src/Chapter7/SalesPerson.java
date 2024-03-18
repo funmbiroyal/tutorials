@@ -1,2 +1,5 @@
-package Chapter7;public class SalesPerson {
+package Chapter7;
+
+public class SalesPerson {
+
 }

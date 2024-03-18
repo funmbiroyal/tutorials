@@ -24,7 +24,7 @@ private static int simCardSlots;
         make = phoneMake;
     }
     public MobilePhone(String imeiNumber, PhoneManufacturer phoneMake, String phoneModel){
-        this(imeiNumber);
+        this(imeiNumber,phoneMake);
         model = phoneModel;
     }
     public MobilePhone(String imeiNumber, PhoneManufacturer phoneMake, int storage){

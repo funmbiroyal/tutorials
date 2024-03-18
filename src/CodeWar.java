@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public class CodeWar {
@@ -30,7 +31,7 @@ public class CodeWar {
     void testFunction() {
         int[] array = {1, 2, 3, 4, 5};
         int value = 3;
-        assertNotSame(array, value);
+        assertArrayEquals(new int[]{0, 1},function(array,value));
     }
 }
 
